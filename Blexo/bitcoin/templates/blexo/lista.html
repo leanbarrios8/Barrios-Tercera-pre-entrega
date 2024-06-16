@@ -1,0 +1,27 @@
+
+{% extends "base1.html" %}
+
+{% block titulo %}
+LISTA                                
+{% endblock titulo %}
+
+{% block titulo-main %}
+MONEDAS CREADAS
+{% endblock titulo-main %}
+
+{% block found-color %}
+<section class="page-section bg-dark text-white mb-0 py-5" id="about">
+    {% endblock found-color %}
+
+{% block texto-main1 %}
+{% if monedas %}
+    <ol>
+        {% for moneda in monedas %}
+            <li>-----------<p>Nombre:</p>{{ moneda.nombre }} <p>Valor:</p><span class="valor-verde">{{ moneda.valor }}</span></p>
+        {% endfor %}
+    </ol>
+{% else %}
+    <p>No hay monedas creadas</p>
+{% endif %}
+{% endblock texto-main1 %}
+    

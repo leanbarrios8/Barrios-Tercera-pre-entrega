@@ -1,6 +1,8 @@
 from django.urls import path
-from bitcoin import views
+from . import views
 
 urlpatterns = [
-    path('', views.bitcoin, name="bitcoin"),
+    path('', views.bitcoin, name='bitcoin'),
+    path('lista/', views.lista, name='lista'),
+    path('monedas/', views.monedas, name='monedas'),
 ]
